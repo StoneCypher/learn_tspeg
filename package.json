@@ -1,0 +1,33 @@
+{
+  "name": "learn_tspeg",
+  "version": "0.1.0",
+  "description": "learning how to get typescript and peg to play together",
+  "main": "index.js",
+  "dependencies": {
+    "ts-pegjs": "^0.1.13",
+    "pegjs": "^0.10.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.3.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^4.1.0"
+  },
+  "scripts": {
+    "clean": "rimraf -f build/ && mkdir build && cd build && mkdir gen && mkdir out && cd ..",
+    "make": "tsc",
+    "gen": "ts-node src/ts/gen.ts",
+    "build": "npm run clean && npm run gen && npm run make",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/learn_tspeg.git"
+  },
+  "author": "John Haugeland <stonecypher@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/learn_tspeg/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/learn_tspeg#readme"
+}
